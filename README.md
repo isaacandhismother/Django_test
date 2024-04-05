@@ -10,3 +10,4 @@
   - Price
 
 Also features searching by title, author and category.
+When visiting the main page browser shows all Books listed in json format.
