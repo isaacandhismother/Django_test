@@ -8,4 +8,5 @@
   - Category
   - Number of pages
   - Price
+
 Also features searching by title, author and category.
