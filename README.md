@@ -8,4 +8,4 @@
   - Category
   - Number of pages
   - Price
-  Aso features searching by title, author and category.
+Also features searching by title, author and category.
