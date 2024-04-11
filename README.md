@@ -1,2 +1,13 @@
 # Description:
-  For now, its just a default django project
+  Django project that allows admin manage the market.
+
+# Features:
+  For now it has only Books model with its:
+  - Title
+  - Autor
+  - Category
+  - Number of pages
+  - Price
+
+Also features searching by title, author and category.
+When visiting the main page browser shows all Books listed in json format.
