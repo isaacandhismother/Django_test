@@ -1,8 +1,8 @@
 # Description:
   Django project that allows admin manage the market.
 
-# Features:
-  For now it has only Books model with its:
+# Admin panel Features:
+  Admin panel features Book model with editable:
   - Title
   - Autor
   - Category
@@ -10,4 +10,9 @@
   - Price
 
 Also features searching by title, author and category.
-When visiting the main page browser shows all Books listed in json format.
+
+
+# About the website:
+The main page shows a list of books and a sidebar with navigation(Needs to be reworked). </br>
+Listing has a paging function, so adding  more books than the maximum value per page creates a new page. </br>
+If there is only one page, a pages selection bar will not show. </br>
