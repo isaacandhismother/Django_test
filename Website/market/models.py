@@ -11,3 +11,7 @@ class Book(models.Model):
 
     def __str__(self):
         return f'{self.name}, {self.page_count} pages, {self.category}, written by {self.author_name}, {self.price}$'
+
+    class Meta:
+        verbose_name = 'Book'
+        verbose_name_plural = 'Books'

@@ -16,8 +16,3 @@ class BookStore(ListView):
 
 def index(request):
     return render(request, 'market/market_home.html')
-
-
-def return_json(request):
-    data = list(Book.objects.values())
-    return JsonResponse(data, safe=False)
