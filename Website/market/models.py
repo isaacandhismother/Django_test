@@ -7,7 +7,7 @@ class Book(models.Model):
     category = models.CharField('Category', max_length=31)
     author_name = models.CharField('Author', max_length=31)
     price = models.DecimalField('Price', max_digits=4, decimal_places=2)
-    image = models.ImageField('Load image', upload_to='static/market/images')
+    image = models.ImageField('Load image', upload_to='images/')
 
     def __str__(self):
         return f'{self.name}, {self.page_count} pages, {self.category}, written by {self.author_name}, {self.price}$'
