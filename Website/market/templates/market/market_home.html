@@ -3,7 +3,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>{{title}}</title>
+    <title>
+        {% block title %}
+            {{title}}/page
+        {% endblock %}
+    </title>
     <link rel="stylesheet" href="{% static 'market/css/main.css' %}">
 </head>
 <body>

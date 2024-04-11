@@ -1,5 +1,9 @@
 {% extends 'market/market_home.html' %}
 
+{% block title %}
+    {{book.name}}
+{% endblock %}
+
 {% block content %}
     <img style="height: 250px" src="{{book.image.url}}" alt="Book Image">
     <h1>Title: {{book.name}}</h1>
