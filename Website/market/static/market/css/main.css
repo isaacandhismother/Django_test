@@ -1,0 +1,137 @@
+aside{
+    float: left;
+    width: 16%;
+    height: 100vh;
+    padding: 1.5%;
+    background: #d6d6d6;
+    border-radius: 15px;
+    border: 10px;
+}
+
+aside .logo{
+    width: 80%;
+}
+
+aside h3{
+    font-family: "Bookman Old Style";
+    text-align: center;
+}
+
+aside h2{
+    font-family: "Calibri Light";
+    text-align: center;
+}
+
+aside ul{
+    list-style: none;
+}
+
+aside a{
+    text-decoration: none;
+}
+
+aside a:visited{
+    text-decoration: none;
+    color: black;
+}
+
+aside li{
+    display: block;
+    margin-top: 10px;
+    margin-left: -10px;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: Calibri;
+}
+
+aside li:hover{
+    color: #888888;
+}
+
+header{
+    font-size: 3em;
+    position: absolute;
+    font-family: "Book Antiqua";
+    font-weight: bold;
+    padding-left: 30px;
+    padding-top: 10px;
+    height: 7vh;
+    width: 1500px;
+    margin-left: 20%;
+}
+
+main{
+    position: absolute;
+    float: left;
+    height: 120vh;
+    width: 1500px;
+    padding: 30px;
+    margin-top: 10vh;
+    margin-left: 20%;
+}
+
+main .element{
+    background-color: #c4dce8;
+    height: 20vh;
+    width: 50vw;
+    margin-bottom: 20px;
+}
+
+main .book_cover{
+    float: left;
+    margin: 1%;
+    height: 18vh;
+}
+
+main ul{
+    list-style: none;
+}
+
+main .book_link:visited{
+    text-decoration: none;
+    color: black;
+}
+
+main .book_info{
+    font-family: Cambria;
+    float: left;
+    height: 18vh;
+    margin-left: -1%;
+}
+
+main .book_author{
+    margin-top: -15px;
+}
+
+main .book_price{
+    color: darkgreen;
+}
+
+main .book_category{
+    float: right;
+    margin-right: 20px;
+    margin-top: 80px;
+    font-family: Cambria;
+}
+
+main .num_of_pages{
+    position: absolute;
+    margin-top: 5vh;
+}
+
+main .page_number{
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: Georgia;
+    background-color: #c4dce8;
+    border: 25px;
+    border-radius: 30px;
+    padding: 20px;
+    text-align: center;
+}
+
+main .page_number:visited{
+    text-decoration: none;
+    color: black;
+}
