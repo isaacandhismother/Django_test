@@ -1,11 +1,49 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Home page</title>
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="{% static 'market/css/main.css' %}">
 </head>
 <body>
-    <h1>Welcome to our market</h1>
-    <h3>We are opening soon!</h3>
+    <aside>
+        <img class="logo" src="{% static 'market/images/logo.png' %}" alt="">
+        <h3>Online book market</h3>
+        <h2>Navigation</h2>
+        <ul>
+            <a href="{% url 'home' %}"><li>Home page</li></a>
+        </ul>
+    </aside>
+    <header>
+        Browse books:
+    </header>
+    <main>
+        {% block content %}
+            <div class="content">
+                {% for book in book_store %}
+
+                    <div class="element">
+                        <img class="book_cover" src="{{book.image}}" alt="">
+                        <ul class="book_info">
+                            <li class="book_title"><h1>{{book.name}}</h1></li>
+                            <li class="book_author"><h3>{{book.author_name}}</h3></li>
+                            <li class="book_price"><h1>{{book.price}}$</h1></li>
+                        </ul>
+                        <h3 class="book_category">category: {{book.category}}</h3>
+
+                    </div>
+
+                {% endfor %}
+            </div>
+            <div class="num_of_pages">
+                {% for p in paginator.page_range %}
+                    {% if page_obj.has_other_pages %}
+                        <a class="page_number" href="?page={{p}}">{{p}}</a>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        {% endblock %}
+    </main>
 </body>
 </html>
