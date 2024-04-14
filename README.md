@@ -9,6 +9,8 @@
   - Number of pages
   - Price
 
+* Added Author model with onetomany relation and Category model with manytomany relations. </br>
+
 Also features searching by title, author and category.
 
 
