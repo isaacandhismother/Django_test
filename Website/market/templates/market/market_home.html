@@ -1,26 +1,31 @@
 {% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>
         {% block title %}
-            {{title}}/page
+            {{title}}/
         {% endblock %}
     </title>
-    <link rel="stylesheet" href="{% static 'market/css/main.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'market/css/main.css' %}">
 </head>
 <body>
     <aside>
-        <img class="logo" src="{% static 'market/images/logo.png' %}" alt="">
+        <img class="logo" src="{% static 'market/images/logo.png' %}" alt="" draggable="false">
         <h3>Online book market</h3>
-        <h2>Navigation</h2>
         <ul>
             <a href="{% url 'home' %}"><li>Home page</li></a>
         </ul>
     </aside>
     <header>
-        Browse books:
+        <div class="search_bar">
+            <input type="text" class="search_field" placeholder="Search" required minlength="2" maxlength="64"/>
+            <a href="">
+                <img class="search_icon" src="{% static 'market/images/search_icon.png' %}" alt="" draggable="false"></img>
+            </a>
+        </div>
     </header>
     <main>
         {% block content %}
@@ -34,7 +39,12 @@
                                 <li class="book_author"><h3>{{book.author_name}}</h3></li>
                                 <li class="book_price"><h1>{{book.price}}$</h1></li>
                             </ul>
-                            <h3 class="book_category">category: {{book.category}}</h3>
+                            <ul class="book_category">
+                                <h3 class="category">Category:  </h3>
+                                {% for category in book.categories.all %}
+                                    <li class="">{{ category.name }}</li>
+                                {% endfor %}
+                            </ul>
                         </div>
                     </a>
                 {% endfor %}

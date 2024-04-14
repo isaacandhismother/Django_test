@@ -9,6 +9,11 @@
     <h1>Title: {{book.name}}</h1>
     <h3>Author: {{book.author_name}}</h3>
     <h3>{{book.price}}$</h3>
-    <h3>Category: {{book.category}}</h3>
+    <h3>Category:</h3>
+        <ul>
+            {% for category in categories %}
+            <li>{{ category.name }}</li>
+            {% endfor %}
+        </ul>
     <h3>Pages: {{book.page_count}}</h3>
 {% endblock %}
